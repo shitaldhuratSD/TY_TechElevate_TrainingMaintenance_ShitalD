@@ -1,0 +1,116 @@
+<div class="col-md-6 offset-3 mt-4 card card-body">
+    <div class="modal-body col-md-12">  
+        <h2 class="card-header text-center">Create Details</h2>
+            <form action="" method="POST" role="form" #batchdetailsform='ngForm' (ngSubmit)='batchdetails(batchdetailsform.value)'>    
+            <div class="form-row mt-3">                  
+                <div class="form-group col-md-6" >
+                      <input type="text" class="form-control" id="input" name="client" placeholder="Enter Client Name" #client="ngModel"
+                          ngModel required>
+                      <div *ngIf="client.invalid && (client.dirty || client.touched)" class="errmsg">
+                          <div *ngIf="client.errors.required">
+                              Client is required *
+                          </div>
+                      </div>
+                </div>
+                <div class="form-group col-md-6">
+                        <select class="form-control" id="input" name="technology" #technology='ngModel'  ngModel required>
+                                <option value="" selected disabled hidden>Technology</option>
+                                <option>Java </option>  
+                                <option>Java Full Stack </option>
+                                <option>Mean Full Stack</option>
+                                <option>Data Science</option>
+                                <option>Dot Net </option>
+                                <option>Mearn Stack</option>
+                              </select>  
+                    <div *ngIf="technology.invalid && (technology.dirty || technology.touched)" class="errmsg">
+                        <div *ngIf="technology.errors.required">
+                            Technology is required *
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                        <select class="form-control" id="input"  name="batchType" #batchType='ngModel'  ngModel required>
+                                <option value="" selected disabled hidden>Batchtype</option>
+                                <option>Paid</option>  
+                                <option>Free</option>
+                              </select> 
+                    <div *ngIf="batchType.invalid && (batchType.dirty || batchType.touched)" class="errmsg">
+                        <div *ngIf="batchType.errors.required">
+                            Batchtype is required *
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6" >
+                        <input type="text" class="form-control" id="input" name="feeInfo" placeholder="Fees Info" #feeInfo="ngModel"
+                            ngModel required>
+                        <div *ngIf="feeInfo.invalid && (feeInfo.dirty || feeInfo.touched)" class="errmsg">
+                            <div *ngIf="feeInfo.errors.required">
+                                fees info is required *
+                            </div>
+                        </div>
+                  </div>
+                  <div class="form-group col-md-6" >
+                        <input type="text" class="form-control" id="input" name="costPerCandidate" placeholder="Cost Per Candidate" #costPerCandidate="ngModel"
+                            ngModel required>
+                        <div *ngIf="costPerCandidate.invalid && (costPerCandidate.dirty || costPerCandidate.touched)" class="errmsg">
+                            <div *ngIf="costPerCandidate.errors.required">
+                                 info is required *
+                            </div>
+                        </div>
+                  </div>
+                  <div class="form-group col-md-6" >
+                        <input type="text" class="form-control" id="input" name="location" placeholder="Location" #location="ngModel"
+                            ngModel required>
+                        <div *ngIf="location.invalid && (location.dirty || location.touched)" class="errmsg">
+                            <div *ngIf="location.errors.required">
+                                Location is required *
+                            </div>
+                        </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                        <select class="form-control" id="input"  name="traineeType" #traineeType='ngModel'  ngModel required>
+                                <option value="" selected disabled hidden>Select Trainee type</option>
+                                <option>Freshers </option>  
+                                <option>Lateral</option>
+                                <option>Mixed</option>
+                              </select>  
+                    <div *ngIf="traineeType.invalid && (traineeType.dirty || traineeType.touched)" class="errmsg">
+                        <div *ngIf="traineeType.errors.required">
+                            Technology is required *
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="date" id="input" name="startDate" #startDate='ngModel' class="form-control"
+                        placeholder="Start Date" ngModel required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="date" id="input" name="endDate" #endDate='ngModel' class="form-control"
+                        placeholder="End Date" ngModel required>
+                </div>
+                <div class="form-group col-md-6">
+                        <select class="form-control" id="input"  name="modeOfTraining" #modeOfTraining='ngModel'  ngModel required>
+                                <option value="" selected disabled hidden>Mode Of Training</option>
+                                <option>Online Training</option>  
+                                <option>Offline Training</option>
+                              </select>  
+                    <div *ngIf="modeOfTraining.invalid && (modeOfTraining.dirty || modeOfTraining.touched)" class="errmsg">
+                        <div *ngIf="modeOfTraining.errors.required">
+                            Required *
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="date" id="input" name="invoiceDate" #invoiceDate='ngModel' class="form-control"
+                        placeholder="End Date" ngModel required>
+                </div>
+            </div>
+             <div> 
+                <button type="submit" class="btn btn-outline-success float-right">Submit</button>
+              </div>
+              <!-- <div> 
+                <button type="submit" class="btn btn-outline-success float-right">Reset</button>
+              </div>   -->
+            </form>
+            </div>
+        </div>
